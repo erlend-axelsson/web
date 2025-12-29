@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>404 - Not found - <%=@key%></title>
+        <meta name="author" content="Erlend Axelsson" />
+        <link rel="stylesheet" href="/style.css" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    </head>
+    <body>
+      <header>
+        <h1> 404 - Not found </h1>
+        <a href="/"><span class="mono">~/Back ↩️</span></a>
+      </header>
+      <main>
+        <h2><%=@key%> - not found</h2>
+        <p><%=@message%></p>
+      </main>
+      <footer>
+        <ul class="horizontal-list">
+          <li><a href="<%=@author_github%>">Github</a></li>
+          <li><a href="<%=@author_linkedin%>">Linkedin</a></li>
+        </ul>
+      </footer>
+    </body>
+</html>

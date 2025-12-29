@@ -1,0 +1,10 @@
+<li>
+  <a href="<%= path %>">
+  <h2><%= title %></h2>
+  <p><%= intro %><br>
+  <%= if image_src !== nil do %>
+    <img src="<%= image_src %>" alt="<%= image_alt||"" %>">
+  <% end %>
+  </p>
+  </a>
+</li>

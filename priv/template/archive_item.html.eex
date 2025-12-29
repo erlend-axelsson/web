@@ -1,0 +1,5 @@
+<li><a href="<%=path%>">
+<h3><%=title%></h3>
+<span><%= DateTime.to_iso8601(DateTime.truncate(last_updated, :second)) %></span>
+<ul class="horizontal-list"><%= for(tag <- tags, do: <<"<li>",tag::binary,"</li>">>) %></ul>
+</a></li>

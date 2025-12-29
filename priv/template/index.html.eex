@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><%=@title%></title>
+        <meta name="author" content="<%=@author_name%>" />
+        <link rel="stylesheet" href="/style.css" />
+        <link rel="stylesheet" href="/highlight.css" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    </head>
+    <body>
+      <header>
+        <a href="/"><h1 class="mono"><%=@page_title%></h1></a>
+        <ul class="unstyled_list">
+          <li><a href="/archive"><span class="mono">~/Archive</span></a></li>
+        </ul>
+      </header>
+      <main>
+        <p>updated: <%= @updated %></p>
+        <hr>
+        <ul>
+          <%= for article <- @articles, do: Web.Render.list_item(article) %>
+        </ul>
+      </main>
+      <footer>
+        <ul class="horizontal-list">
+          <li><a href="<%=@author_github%>">Github</a></li>
+          <li><a href="<%=@author_linkedin%>">Linkedin</a></li>
+        </ul>
+      </footer>
+    </body>
+</html>

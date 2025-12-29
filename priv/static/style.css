@@ -1,0 +1,74 @@
+:root {
+    --ui-sans:
+        system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --ui-mono:
+        ui-monospace, SF Mono, Menlo, Consolas, Monaco, "Liberation Mono",
+        "Droid Sans Mono", "Source Code Pro", monospace;
+    font-family: var(--ui-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        color: ghostwhite;
+    }
+    body {
+        background-color: #000000;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    color: #000000;
+}
+
+body {
+    margin: 0;
+    background: ghostwhite;
+}
+
+main,
+header,
+footer {
+    padding: 1rem;
+}
+main > ul {
+    list-style: none;
+    padding: 0;
+}
+main img {
+    max-width: 100%;
+    object-fit: scale-down;
+}
+
+pre code {
+    font-family: var(--ui-mono);
+}
+
+.mono {
+    font-family: var(--ui-mono);
+}
+
+.unstyled_list {
+    padding: 0;
+    list-style: none;
+}
+
+.horizontal-list {
+    list-style: none;
+}
+.horizontal-list li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+.highlight {
+    padding: 1rem;
+    width: 100%;
+    max-width: 100ch;
+}
+
+.highlight {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
